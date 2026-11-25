@@ -1,0 +1,40 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  color: #30223d;
+  background: #fff8fc;
+  line-height: 1.6;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-underline-offset: .3em; }
+a:focus-visible { outline: 3px solid #74379e; outline-offset: 5px; }
+.wrap { width: min(70rem, calc(100% - 3rem)); margin-inline: auto; }
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 2rem; padding-block: 1.25rem; border-bottom: 1px solid #e8d3e4; }
+.brand { font-weight: 750; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; padding-block: clamp(3rem, 8vw, 7rem); }
+.eyebrow { color: #6e387b; font-weight: 700; margin: 0 0 .75rem; }
+h1, h2 { font-family: Georgia, serif; font-weight: 500; line-height: 1; margin: 0; }
+h1 { font-size: clamp(3.4rem, 9vw, 7.75rem); letter-spacing: -.06em; }
+h2 { font-size: clamp(2.25rem, 5vw, 3.5rem); letter-spacing: -.04em; }
+h3 { font-size: 1.16rem; line-height: 1.3; margin: 0; }
+.intro { font-size: 1.15rem; max-width: 33ch; margin-block: 1.4rem; }
+.button { display: inline-block; color: white; background: #502769; padding: .65rem 1.15rem; border-radius: 999px; text-decoration: none; font-weight: 650; }
+.button:hover { background: #673483; }
+.art { display: grid; place-items: center; min-height: 26rem; border-radius: 48% 48% 1.5rem 1.5rem; background: radial-gradient(ellipse at 48% 65%, #f3b8e6, #ebd9fc 75%); }
+.art img { width: min(72%, 21rem); height: auto; }
+.section { padding-block: 3rem; border-top: 1px solid #e8d3e4; }
+.flow, .stack dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0 0; }
+.flow { padding: 0; list-style-position: inside; }
+.flow li, .stack dl div { padding: 1.25rem; border-radius: 1rem; background: #f6eaf6; }
+.flow li::marker, dt { font-weight: 750; color: #6e387b; }
+.flow h3 { display: inline; }
+.flow p { margin: .55rem 0 0; }
+dd { margin: .25rem 0 0; }
+footer { border-top: 1px solid #e8d3e4; padding-block: 1.25rem; }
+@media (max-width: 46rem) {
+  .hero, .flow, .stack dl { grid-template-columns: 1fr; }
+  .art { min-height: 18rem; }
+  .art img { max-width: 14rem; }
+}
